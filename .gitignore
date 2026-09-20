@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+._*
+
+# 构建产物
+dist/
+build/
+*.app
+
+# 转换时产生的日志 / 中间文件
+.texconvert.log
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,34 @@
+% 最小示例：不依赖任何额外宏包，装好任意 TeX 发行版即可编译。
+% 测试：
+%   ./src/convert.sh both examples/demo.tex
+% 会生成同目录下的 demo.pdf 与 demo.docx。
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{latex-convert · Demo}
+\author{boff868}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{What is this}
+This is the sample document for \texttt{latex-convert}.
+Drag it onto the app icon (or run \texttt{convert.sh both examples/demo.tex})
+and you will get a \texttt{.pdf} and a \texttt{.docx} next to it.
+
+\section{Math}
+Inline math $E = mc^2$, and a display equation:
+\begin{equation}
+  \int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x = \sqrt{\pi}.
+\end{equation}
+
+\section{Lists}
+\begin{itemize}
+  \item Word: produced by \texttt{pandoc}.
+  \item PDF: compiled by a local LaTeX engine (twice, so cross-references settle).
+\end{itemize}
+
+\end{document}
