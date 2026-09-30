@@ -23,9 +23,10 @@ echo "==> 编译 AppleScript → applet"
 # main.applescript 里有 on open 处理程序，osacompile 会自动生成 droplet
 osacompile -o "$APP" "$ROOT/src/main.applescript"
 
-echo "==> 放入转换引擎 convert.sh"
+echo "==> 放入转换/阅览引擎"
 cp "$ROOT/src/convert.sh" "$APP/Contents/Resources/convert.sh"
-chmod +x "$APP/Contents/Resources/convert.sh"
+cp "$ROOT/src/preview.sh" "$APP/Contents/Resources/preview.sh"
+chmod +x "$APP/Contents/Resources/convert.sh" "$APP/Contents/Resources/preview.sh"
 
 echo "==> 设置图标"
 if [ -f "$ICNS" ]; then
