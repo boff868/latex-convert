@@ -9,6 +9,8 @@ build/
 
 # 转换时产生的日志 / 中间文件
 .texconvert.log
+examples/*.pdf
+examples/*.docx
 *.aux
 *.bbl
 *.blg
